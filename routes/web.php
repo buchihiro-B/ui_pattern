@@ -26,3 +26,8 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/recipe/create', [App\Http\Controllers\CreateRecipeController::class, "create"])
+	->name("create_recipe");
+Route::post('/recipe/create', [App\Http\Controllers\CreateRecipeController::class, "store"])
+	->name("store_recipe");

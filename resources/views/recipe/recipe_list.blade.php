@@ -35,7 +35,7 @@
 							<td class="px-3 py-3 border">{{ $recipe->created_at->format("Y-m-d H:i:s") }}</td>
 							<td class="px-3 py-3 border">{{ $recipe->updated_at->format("Y-m-d H:i:s") }}</td>
 							<td class="px-3 py-3 border">
-								<a href="#" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">詳細</a>
+								<a href="{{ route('recipe_detail', ['id' => $recipe->id]) }}" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">詳細</a>
 							</td>
 						</tr>
 						@endforeach

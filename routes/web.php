@@ -34,3 +34,11 @@ Route::post('/recipe/create', [App\Http\Controllers\CreateRecipeController::clas
 
 Route::get('/recipe', [App\Http\Controllers\RecipeListController::class, "show"])
     ->name("recipe_list");
+
+/* 詳細・編集 */
+Route::get('/recipe/{id}', [App\Http\Controllers\RecipeController::class, "show"])
+    ->name("recipe_detail");
+Route::get('/recipe/edit/{id}', [App\Http\Controllers\RecipeController::class, "form"])
+    ->name("recipe_edit");
+Route::post('/recipe/edit/{id}', [App\Http\Controllers\RecipeController::class, "update"])
+    ->name("update_recipe");

@@ -31,3 +31,6 @@ Route::get('/recipe/create', [App\Http\Controllers\CreateRecipeController::class
 	->name("create_recipe");
 Route::post('/recipe/create', [App\Http\Controllers\CreateRecipeController::class, "store"])
 	->name("store_recipe");
+
+Route::get('/recipe', [App\Http\Controllers\RecipeListController::class, "show"])
+    ->name("recipe_list");
